@@ -1,11 +1,11 @@
 # Проект FitLife - MVP версия 1.0
-import sys
 import io
+import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 print(
-    'Добро пожаловать в FitLife! ', 
+    'Добро пожаловать в FitLife! ',
     'Я Ваш персональный помощник на пути к здоровой жизни.'
 )
 user_name = input(
@@ -22,7 +22,7 @@ user_height = float(input(
 )
 print()
 print(
-    'Отлично! Первым делом, узнаем Ваш ИМТ ', 
+    'Отлично! Первым делом, узнаем Ваш ИМТ ',
     '(Индекс массы тела) и норму приема воды.'
 )
 bmi = user_weight / (user_height ** 2)
@@ -37,9 +37,9 @@ water_nedded_l = water_nedded_ml / ML_PER_L  # Переводим в литры.
 print('-' * 40)
 print(
     f'Отчет для пользоватателя: {user_name} ({user_age} г.)\n'
-    f'Ваш вес: {user_weight} кг.\n', 
-    f'Ваш рост: {user_height} м.\n', 
-    f'Ваш ИМТ: {round(bmi, 1)}\n', 
+    f'Ваш вес: {user_weight} кг.\n',
+    f'Ваш рост: {user_height} м.\n',
+    f'Ваш ИМТ: {round(bmi, 1)}\n',
     f'Рекомендуемая норма воды: {round(water_nedded_l, 1)} л. в день'
 )
 print('-' * 40)
